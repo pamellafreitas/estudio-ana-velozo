@@ -1,46 +1,148 @@
-
-.tap-split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:clamp(28px,6vw,80px)}
-.tap-photo-slot{aspect-ratio:4/3;width:100%;border:1px solid #f3c1c24d;border-radius:14px;background:radial-gradient(ellipse at 75% 15%,#4b3c4a,#222026 72%)}
-.tap-copy h2{margin-top:0}
-.tap-copy a:not(.button){color:var(--pink)}
-.tap-page .hero h1{font-size:clamp(34px,3.3vw,53px)}
-.tap-page .button{white-space:normal;max-width:100%}
-.tap-divider{border-top:1px solid #f3c1c260}
-.tap-surface{background:var(--surface)}
-.tap-reading{max-width:850px}
-.tap-reading>.actions{justify-content:center;align-items:center}
-.tap-soft,.tap-final{background:#ebc9cd;color:var(--bg)}
-.tap-soft p,.tap-final p{color:#503b44}
-
-.tap-final .tap-photo-slot{background:#d7b7bc;border-color:#ae7783}
-.tap-copy address{font-style:normal;color:var(--pink);margin-top:20px}
-@media(max-width:820px){.tap-split{grid-template-columns:minmax(0,1fr)}}
-
-.tap-learning{background:#ebc9cd;color:var(--bg)}
-.tap-learning-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:1000px;margin:32px auto}
-.tap-learning-cards article{background:#f3d8db;border:1px solid #ae7783;padding:28px;border-radius:14px}
-.tap-learning-cards h3{color:#713d50;margin:0 0 12px}
-.tap-learning-cards p{color:#503b44;margin:0}
-.tap-learning-cards svg{display:block;width:32px;height:32px;color:#713d50;margin-bottom:18px}
-.tap-learning .actions{justify-content:center}
-.tap-children{background:var(--bg)}
-.tap-audience{background:var(--surface);border-block:1px solid var(--line)}
-.tap-audience h2{margin-top:0}
-.tap-studio{
- background:linear-gradient(90deg,#222026f0,#222026b8),url('/assets/sobre-espaco.webp') center 45% / cover no-repeat;
+.tap-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(28px, 6vw, 80px);
 }
-.tap-studio .tap-copy{max-width:680px}
-.tap-final{background:var(--pink)}
-.tap-final>.container{padding-block:clamp(48px,6vw,90px)}
-.tap-final::after{background:linear-gradient(135deg,#edc6ca,#b998a2);border-left:1px solid #ae778340}
-@media(min-width:821px) and (hover:hover) and (prefers-reduced-motion:no-preference){
- .tap-studio{background-attachment:fixed}
+.tap-photo-slot {
+  aspect-ratio: 4/3;
+  width: 100%;
+  border: 1px solid #f3c1c24d;
+  border-radius: 14px;
+  background: radial-gradient(ellipse at 75% 15%, #4b3c4a, #222026 72%);
 }
-@media(max-width:650px){.tap-learning-cards{grid-template-columns:minmax(0,1fr)}}
+.tap-copy h2 {
+  margin-top: 0;
+}
+.tap-copy a:not(.button) {
+  color: var(--pink);
+}
+.tap-page .hero h1 {
+  font-size: clamp(34px, 3.3vw, 53px);
+}
+.tap-page .button {
+  white-space: normal;
+  max-width: 100%;
+}
+.tap-divider {
+  border-top: 1px solid #f3c1c260;
+}
+.tap-surface {
+  background: var(--surface);
+}
+.tap-reading {
+  max-width: 850px;
+}
+.tap-reading > .actions {
+  justify-content: center;
+  align-items: center;
+}
+.tap-soft,
+.tap-final {
+  background: #ebc9cd;
+  color: var(--bg);
+}
+.tap-soft p,
+.tap-final p {
+  color: #503b44;
+}
 
-.tap-final::after{
- background:linear-gradient(90deg,var(--pink),transparent 34%),url('/assets/sapateado-final.webp') center / cover no-repeat;
+.tap-final .tap-photo-slot {
+  background: #d7b7bc;
+  border-color: #ae7783;
 }
-@media(max-width:820px){
- .tap-final::after{background-image:linear-gradient(0deg,var(--pink),transparent 40%),url('/assets/sapateado-final.webp')}
+.tap-copy address {
+  font-style: normal;
+  color: var(--pink);
+  margin-top: 20px;
+}
+@media (max-width: 820px) {
+  .tap-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.tap-learning {
+  background: #ebc9cd;
+  color: var(--bg);
+}
+.tap-learning-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1000px;
+  margin: 32px auto;
+}
+.tap-learning-cards article {
+  background: #f3d8db;
+  border: 1px solid #ae7783;
+  padding: 28px;
+  border-radius: 14px;
+}
+.tap-learning-cards h3 {
+  color: #713d50;
+  margin: 0 0 12px;
+}
+.tap-learning-cards p {
+  color: #503b44;
+  margin: 0;
+}
+.tap-learning-cards svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+  color: #713d50;
+  margin-bottom: 18px;
+}
+.tap-learning .actions {
+  justify-content: center;
+}
+.tap-children {
+  background: var(--bg);
+}
+.tap-audience {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+.tap-audience h2 {
+  margin-top: 0;
+}
+.tap-studio {
+  background:
+    linear-gradient(90deg, #222026f0, #222026b8),
+    url("/assets/sobre-espaco.webp") center 45% / cover no-repeat;
+}
+.tap-studio .tap-copy {
+  max-width: 680px;
+}
+.tap-final {
+  background: var(--pink);
+}
+.tap-final > .container {
+  padding-block: clamp(48px, 6vw, 90px);
+}
+.tap-final::after {
+  background: linear-gradient(135deg, #edc6ca, #b998a2);
+  border-left: 1px solid #ae778340;
+}
+@media (min-width: 821px) and (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .tap-studio {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 650px) {
+  .tap-learning-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.tap-final::after {
+  background:
+    linear-gradient(90deg, var(--pink), transparent 34%),
+    url("/assets/sapateado-final.webp") center / cover no-repeat;
+}
+@media (max-width: 820px) {
+  .tap-final::after {
+    background-image: linear-gradient(0deg, var(--pink), transparent 40%), url("/assets/sapateado-final.webp");
+  }
 }

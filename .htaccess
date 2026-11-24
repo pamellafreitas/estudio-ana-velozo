@@ -1,0 +1,27 @@
+# Configurações de URLs Limpas (sem .html e sem index.html no navegador)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Redireciona /index.html para a raiz /
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+  RewriteRule ^index\.html$ / [R=301,L]
+
+  # 2. Redireciona qualquer /caminho/index.html para /caminho/
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)/index\.html\ HTTP/
+  RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+
+  # 3. Redireciona qualquer requisição externa terminada em .html para a versão limpa
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
+  RewriteRule ^([^.]+)\.html$ /$1/ [R=301,L]
+
+  # 4. Se a pasta existir, carrega o index.html da pasta
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.*)$ $1/index.html [L]
+
+  # 5. Se o arquivo .html existir, carrega internamente sem alterar a URL
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^([^/]+)/?$ $1.html [L]
+</IfModule>
+
