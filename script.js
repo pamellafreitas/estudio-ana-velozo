@@ -61,7 +61,7 @@ document.querySelectorAll(".modality-link").forEach((button) => {
     document.querySelector("#dialog-title").textContent = name;
     document.querySelector("#dialog-description").textContent = description;
     document.querySelector("#dialog-whatsapp").href =
-      "https://wa.me/5521985526176?text=" +
+      "https://wa.me/5521982864083?text=" +
       encodeURIComponent("Olá! Quero conhecer as aulas de " + name + " e agendar uma aula experimental gratuita.");
     dialog.showModal();
     document.body.classList.add("modal-open");
